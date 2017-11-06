@@ -52,7 +52,7 @@
 					<input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
 					<input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
 				</div>
-			</form><br>
+		</form><br>
 			<div class="controls">
 				<div class="button" onclick="getReceipt()">
 					<p>Place Order</p>
@@ -69,12 +69,15 @@
 				<div id="totalPrice1"><h3>Total Price:</h3></div>
 				<div id="totalPrice2"></div>
 			</div>
+
+
+			</div>
 		</div>
 		</div>
 		<script>
 function getReceipt() {
-	text1 = "";
-	text2 = "";
+	text1 = "";  
+	text2 = ""; 
 	var runningTotal = 0;
 	var sizeTotal = 0;
 	var sizeArray = document.getElementsByClassName("size");
@@ -99,7 +102,9 @@ function getReceipt() {
 	}
 	runningTotal = sizeTotal;
 	getMeat(runningTotal,text1,text2); 
-  
+};	
+
+
 function getMeat(runningTotal,text1,text2) {
 	var runningTotal = runningTotal;
 	var meatTotal = 0;
@@ -221,8 +226,6 @@ function clearAll() {
 	document.getElementById("frmMenu").reset();
 	document.getElementById("cart").style.opacity=0;
 };
-
-
 
 </script>
 
